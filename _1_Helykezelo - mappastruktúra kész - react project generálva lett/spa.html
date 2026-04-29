@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <title>SPA React</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<h2>SPA – Két React alkalmazás</h2>
+
+<nav>
+    <button onclick="showApp(1)">App 1</button>
+    <button onclick="showApp(2)">App 2</button>
+</nav>
+
+<div id="spa-root"></div>
+
+<script src="https://unpkg.com/react@18/umd/react.development.js"></script>
+<script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+<script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+
+<script type="text/babel" src="js/spa-app.js"></script>
+
+</body>
+</html>
