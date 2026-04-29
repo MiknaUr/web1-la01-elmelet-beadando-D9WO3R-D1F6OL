@@ -1,0 +1,72 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #f4f4f4;
+}
+
+/* Fejléc */
+header {
+    background: #1e88e5;
+    color: white;
+    padding: 20px;
+    font-size: 28px;
+    font-weight: bold;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+/* Navigáció */
+nav {
+    background: #fff;
+    padding: 15px;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    border-bottom: 1px solid #ddd;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+nav a {
+    font-size: 20px;
+    cursor: pointer;
+    color: #1e88e5;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 8px 16px;
+    border-radius: 6px;
+    transition: 0.2s;
+}
+
+nav a:hover {
+    background: #e3f2fd;
+}
+
+/* Oldalak */
+.page {
+    display: none;
+    padding: 20px;
+}
+
+.active {
+    display: block;
+}
+
+/* App konténer */
+.app-container {
+    max-width: 900px;
+    margin: 20px auto;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.15);
+}
+
+/* Iframe */
+iframe {
+    width: 100%;
+    height: 600px;
+    border: none;
+    border-radius: 8px;
+}

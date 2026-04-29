@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <title>SPA – React Mini Apps</title>
+    <link rel="stylesheet" href="./css/spa.css">
+</head>
+
+<body>
+
+<header>React Mini App – SPA</header>
+
+<nav>
+    <a onclick="showPage('app1')">Stopperóra</a>
+    <a onclick="showPage('app2')">Kő‑Papír‑Olló</a>
+</nav>
+
+<div id="app1" class="page active">
+    <div class="app-container">
+        <iframe src="./miniapp1/dist/index.html"></iframe>
+    </div>
+</div>
+
+<div id="app2" class="page">
+    <div class="app-container">
+        <iframe src="./miniapp2/dist/index.html"></iframe>
+    </div>
+</div>
+
+<script>
+function showPage(id) {
+    document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
+    document.getElementById(id).classList.add('active');
+}
+</script>
+
+</body>
+</html>

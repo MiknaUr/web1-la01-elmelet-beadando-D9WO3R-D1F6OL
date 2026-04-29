@@ -1,9 +1,14 @@
 <?php
-$host = "localhost";
+$dsn = "mysql:host=localhost;dbname=web1_eloadas;charset=utf8";
 $user = "root";
 $pass = "";
-$db = "web1_eloadas";
 
-$conn = new mysqli($host, $user, $pass, $db);
-$conn->set_charset("utf8");
+try {
+    $db = new PDO($dsn, $user, $pass);
+    $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+} catch (PDOException $e) {
+    echo "DB error: " . $e->getMessage();
+    exit;
+}
+
 ?>
