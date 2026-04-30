@@ -3,14 +3,38 @@
 <head>
     <meta charset="UTF-8">
     <title>Fetch API CRUD</title>
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="./css/fetchapi.css">
 </head>
+
 <body>
 
-<h2>Fetch API CRUD – Helyek</h2>
+<a href="index.html" class="back-btn">← Vissza a főoldalra</a>
 
-<div id="fetchApp"></div>
+<h1>Fetch API CRUD – Helyek</h1>
 
-<script src="js/fetchapi.js"></script>
+<div class="card">
+    <h2 id="form-title">Új hely hozzáadása</h2>
+
+    <div class="form-row">
+        <input id="telepules" type="text" placeholder="Település">
+        <input id="utca" type="text" placeholder="Utca">
+        <button id="saveBtn">Hozzáadás</button>
+    </div>
+</div>
+
+<table id="helyTable">
+    <thead>
+        <tr>
+            <th>Az</th>
+            <th>Település</th>
+            <th>Utca</th>
+            <th>Műveletek</th>
+        </tr>
+    </thead>
+    <tbody></tbody>
+</table>
+
+<script src="./js/fetchapi.js"></script>
+
 </body>
 </html>
