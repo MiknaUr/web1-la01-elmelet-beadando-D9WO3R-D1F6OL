@@ -1,0 +1,102 @@
+/* KÜLSŐ KONTÉNER */
+.crud-wrapper {
+    max-width: 900px;
+    margin: 40px auto;
+    font-family: Arial, sans-serif;
+    padding: 20px;
+}
+
+/* CÍM */
+.crud-title {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+/* FORM KÁRTYA */
+.crud-card {
+    background: #f9f9f9;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    margin-bottom: 30px;
+}
+
+.crud-card h2 {
+    margin-top: 0;
+}
+
+/* FORM */
+.crud-form {
+    display: flex;
+    gap: 10px;
+}
+
+.crud-input {
+    flex: 1;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+/* GOMBOK */
+.crud-btn {
+    padding: 10px 20px;
+    background: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.crud-btn-edit {
+    margin-right: 10px;
+    padding: 6px 12px;
+    background: #ffc107;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.crud-btn-delete {
+    padding: 6px 12px;
+    background: #dc3545;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* TÁBLÁZAT */
+.crud-table {
+    width: 100%;
+    border-collapse: collapse;
+    background: white;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+.crud-table th {
+    background: #007bff;
+    color: white;
+    padding: 10px;
+}
+
+.crud-table td {
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+}
+
+.back-btn {
+    display: inline-block;
+    margin-bottom: 20px;
+    padding: 8px 14px;
+    background: #444;
+    color: white;
+    text-decoration: none;
+    border-radius: 6px;
+    font-size: 14px;
+    transition: 0.2s;
+}
+
+.back-btn:hover {
+    background: #222;
+}
