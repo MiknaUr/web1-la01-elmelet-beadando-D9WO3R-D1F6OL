@@ -1,23 +1,17 @@
-// Alaposztály
 class Shape {
     constructor(x, y, color = "black") {
         this.x = x;
         this.y = y;
         this.color = color;
     }
-
-    draw(ctx) {
-        // leszármazottak írják felül
-    }
+    draw(ctx) {}
 }
 
-// Kör osztály
 class Circle extends Shape {
     constructor(x, y, radius = 30, color = "red") {
         super(x, y, color);
         this.radius = radius;
     }
-
     draw(ctx) {
         ctx.beginPath();
         ctx.fillStyle = this.color;
@@ -26,31 +20,36 @@ class Circle extends Shape {
     }
 }
 
-// Négyzet osztály
 class Square extends Shape {
     constructor(x, y, size = 50, color = "green") {
         super(x, y, color);
         this.size = size;
     }
-
     draw(ctx) {
         ctx.fillStyle = this.color;
         ctx.fillRect(this.x - this.size/2, this.y - this.size/2, this.size, this.size);
     }
 }
 
-// Vászon és állapot
 const canvas = document.getElementById("canvas");
 const ctx = canvas.getContext("2d");
 
 let shapes = [];
 let currentShape = "circle";
+let currentSize = 40;
 
-// Gombok
 document.getElementById("circleBtn").onclick = () => currentShape = "circle";
 document.getElementById("squareBtn").onclick = () => currentShape = "square";
 
-// Kattintásra alakzat létrehozása
+document.getElementById("sizeInput").oninput = (e) => {
+    currentSize = parseInt(e.target.value);
+};
+
+document.getElementById("resetBtn").onclick = () => {
+    shapes = [];
+    drawAll();
+};
+
 canvas.addEventListener("click", (e) => {
     const rect = canvas.getBoundingClientRect();
     const x = e.clientX - rect.left;
@@ -59,20 +58,18 @@ canvas.addEventListener("click", (e) => {
     let shape;
 
     if (currentShape === "circle") {
-        shape = new Circle(x, y);
+        shape = new Circle(x, y, currentSize);
     } else {
-        shape = new Square(x, y);
+        shape = new Square(x, y, currentSize);
     }
 
     shapes.push(shape);
     drawAll();
 });
 
-// Minden alakzat kirajzolása
 function drawAll() {
     ctx.clearRect(0, 0, canvas.width, canvas.height);
     shapes.forEach(s => s.draw(ctx));
 }
 
-// Induláskor üres vászon
 drawAll();

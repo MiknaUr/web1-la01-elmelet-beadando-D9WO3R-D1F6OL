@@ -34,3 +34,26 @@ body {
     border: 2px solid #333;
     border-radius: 10px;
 }
+
+#toolbar label {
+    margin-left: 20px;
+    font-size: 16px;
+}
+
+#sizeInput {
+    width: 60px;
+    padding: 6px;
+    margin-left: 5px;
+    border-radius: 6px;
+    border: 1px solid #aaa;
+}
+
+#resetBtn {
+    margin-left: 20px;
+    padding: 10px 20px;
+    background: #d32f2f;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}

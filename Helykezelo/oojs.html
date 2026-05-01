@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>OOJS – Grafikus alkalmazás</title>
-    <link rel="stylesheet" href="./css/oojs.css">
+    <link rel="stylesheet" href="./project/css/oojs.css">
 </head>
 
 <body>
@@ -17,10 +17,16 @@
 <div id="toolbar">
     <button id="circleBtn">Kör</button>
     <button id="squareBtn">Négyzet</button>
+
+    <label>Méret:
+        <input type="number" id="sizeInput" value="40" min="10" max="150">
+    </label>
+
+    <button id="resetBtn">Reset</button>
 </div>
 
 <canvas id="canvas" width="800" height="500"></canvas>
 
-<script src="./js/oojs.js"></script>
+<script src="./project/js/oojs.js"></script>
 </body>
 </html>
