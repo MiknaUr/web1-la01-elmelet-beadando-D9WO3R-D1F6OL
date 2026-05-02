@@ -6,7 +6,7 @@ export default function App() {
   const [form, setForm] = useState({ az: null, telepules: "", utca: "" });
 
   const loadData = () => {
-    fetch("http://localhost/Helykezelo/project/api/hely_list.php")
+    fetch("http://web1project.vgltd.hu/project/api/hely_list.php")
       .then(res => res.json())
       .then(data => setHelyek(data));
   };
@@ -19,8 +19,8 @@ export default function App() {
     e.preventDefault();
 
     const url = form.az === null
-      ? "http://localhost/Helykezelo/project/api/hely_add.php"
-      : "http://localhost/Helykezelo/project/api/hely_update.php";
+      ? "http://web1project.vgltd.hu/project/api/hely_add.php"
+      : "http://web1project.vgltd.hu/project/api/hely_update.php";
 
     const body = form.az === null
       ? { telepules: form.telepules, utca: form.utca }
@@ -48,7 +48,7 @@ export default function App() {
   const deleteHely = async (az) => {
     if (!window.confirm("Biztosan törölni szeretnéd ezt a helyet?")) return;
 
-    await fetch("http://localhost/Helykezelo/project/api/hely_delete.php", {
+    await fetch("http://web1project.vgltd.hu/project/api/hely_delete.php", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ az })

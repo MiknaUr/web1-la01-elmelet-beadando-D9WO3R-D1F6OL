@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import axios from "axios";
 import "./Crud.css";   
 
-const API = "http://localhost/Helykezelo/project/api/";
+const API = "http://web1project.vgltd.hu/project/api/";
 
 export default function App() {
   const [helyek, setHelyek] = useState([]);
@@ -93,8 +93,9 @@ export default function App() {
               <td>{h.telepules}</td>
               <td>{h.utca}</td>
               <td>
-                <button onClick={() => setForm(h)} className="btn btn-edit">
-                  Szerkeszt
+                <button onClick={() => {setForm(h);
+                    window.scrollTo({ top: 0, behavior: "smooth" });
+                    }} className="btn btn-edit">Szerkeszt
                 </button>
                 <button onClick={() => del(h.az)} className="btn btn-delete">
                   Töröl

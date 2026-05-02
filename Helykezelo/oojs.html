@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <title>OOJS – Grafikus alkalmazás</title>
+    <link rel="stylesheet" href="./project/css/oojs.css">
+</head>
+
+<body>
+
+<a href="index.html" class="back-btn">← Vissza a főoldalra</a>
+
+<h1>OOJS – Objektumorientált grafikus alkalmazás</h1>
+
+<p>Kattints a vászonra kör vagy négyzet létrehozásához!</p>
+
+<div id="toolbar">
+    <button id="circleBtn">Kör</button>
+    <button id="squareBtn">Négyzet</button>
+
+    <label>Méret:
+        <input type="number" id="sizeInput" value="40" min="10" max="150">
+    </label>
+
+    <button id="resetBtn">Reset</button>
+</div>
+
+<canvas id="canvas" width="800" height="500"></canvas>
+
+<script src="./project/js/oojs.js"></script>
+</body>
+</html>

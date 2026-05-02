@@ -1,4 +1,4 @@
-const API = "http://localhost/Helykezelo/project/api/";
+const API = "http://web1project.vgltd.hu/project/api/";
 
 let editingId = null;
 

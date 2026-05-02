@@ -1,0 +1,59 @@
+body {
+    font-family: Arial, sans-serif;
+    background: #f4f4f4;
+    text-align: center;
+    padding: 20px;
+}
+
+.back-btn {
+    display: inline-block;
+    margin-bottom: 20px;
+    padding: 8px 14px;
+    background: #444;
+    color: white;
+    text-decoration: none;
+    border-radius: 6px;
+}
+
+#toolbar {
+    margin-bottom: 20px;
+}
+
+#toolbar button {
+    padding: 10px 20px;
+    margin: 0 10px;
+    background: #1e88e5;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+#canvas {
+    background: white;
+    border: 2px solid #333;
+    border-radius: 10px;
+}
+
+#toolbar label {
+    margin-left: 20px;
+    font-size: 16px;
+}
+
+#sizeInput {
+    width: 60px;
+    padding: 6px;
+    margin-left: 5px;
+    border-radius: 6px;
+    border: 1px solid #aaa;
+}
+
+#resetBtn {
+    margin-left: 20px;
+    padding: 10px 20px;
+    background: #d32f2f;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
